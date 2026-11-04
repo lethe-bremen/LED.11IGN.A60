@@ -121,14 +121,21 @@ Firmen-Account ist die alte Adresse ungültig geworden, und jeder bis dahin gedr
 oder verschickte QR-Code lief ins Leere. Mit eigener Subdomain hätte sich nur der
 DNS-Eintrag geändert, alle Codes wären weiter gegangen.
 
-Das lohnt sich vor allem, wenn die Seite länger als eine Messe leben soll. Drei Schritte:
+Das lohnt sich vor allem, wenn die Seite länger als eine Messe leben soll. Vier Schritte:
 
-1. Beim DNS-Verwalter von lethe-bremen.de (laut Impressum Gemini ArtWork Media)
-   einen CNAME-Eintrag anlegen: `downloads` → `lethe-bremen.github.io`
+1. Im DNS von lethe-bremen.de einen CNAME-Eintrag anlegen:
+   `downloads` → `lethe-bremen.github.io`. Die Nameserver der Domain liegen bei
+   GoDaddy (`domaincontrol.com`); wer dort das Konto verwaltet, ist vorher zu klären
+   (nicht zwingend die Agentur, die die Webseite betreibt)
 2. Im Repo unter *Settings → Pages → Custom domain* `downloads.lethe-bremen.de`
    eintragen und *Enforce HTTPS* aktivieren
 3. `URL` in beiden Skripten unter `tools/` anpassen und Poster und Banner neu
-   erzeugen — der QR-Code zeigt sonst weiter auf die alte Adresse
+   erzeugen — der QR-Code zeigt sonst weiter auf die alte Adresse. Die Seite liegt
+   dann direkt unter `downloads.lethe-bremen.de/` (ohne `/LED.11IGN.A60/`); die
+   `github.io`-Adresse leitet GitHub darauf um, solange das Konto besteht. Eine
+   Subdomain gehört genau einem Repo.
+4. Beim Offline-Nehmen der Seite den CNAME-Eintrag wieder löschen, sonst zeigt er auf
+   eine Adresse, die ein Fremder übernehmen könnte
 
 Wichtig dabei: Danach **nichts mehr drucken, bevor der DNS-Eintrag steht und HTTPS
 aktiv ist.** Und: Sobald die Subdomain läuft, die Adresse auch nicht mehr ändern.

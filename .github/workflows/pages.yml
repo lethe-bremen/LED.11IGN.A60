@@ -1,0 +1,50 @@
+name: Seite bauen und veroeffentlichen
+
+# Läuft nach jedem Upload/Commit auf main: baut die Seite aus files/, documents.json
+# und index.template.html (tools/build.py), prüft sie und veröffentlicht sie.
+# Schlägt der Bau fehl, bleibt die bisherige Seite unverändert online.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:        # manuell: Actions -> "Seite bauen und veroeffentlichen" -> Run workflow
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Seite bauen
+        run: python tools/build.py
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+      - name: Veröffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v5
+
+      - name: Live-Seite prüfen
+        run: python tools/build.py --verify "${{ steps.deployment.outputs.page_url }}"

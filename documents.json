@@ -1,0 +1,67 @@
+{
+  "_hinweis": "Verzeichnis aller Dokumente. Pro Eintrag steht 'pattern' fuer den Dateinamen: {v} steht fuer die Versionsnummer. Liegen mehrere Versionen in files/, nimmt die Seite automatisch die hoechste. In 'name' und 'desc' sind {v} (wie im Dateinamen), {V} (mit vorangestelltem V) und {n} (reine Zahl ohne fuehrende Nullen) moeglich. Optional: 'name' (sonst Dateiname), 'extra' (Zusatz in der Meta-Zeile), 'group' (Eintraege mit gleichem Gruppennamen sollen denselben Stand haben, sonst gibt es einen Hinweis). Siehe README.md.",
+
+  "sections": [
+    {
+      "title": "Approvals",
+      "note": "EC type-examination certificates (Module B) under the Marine Equipment Directive 2014/90/EU, issued by TÜV NORD Systems GmbH & Co. KG (NB 0045).",
+      "items": [
+        {
+          "pattern": "M26016-B-{v}-LED.11IGN.A60.pdf",
+          "name": "M26016-B-{v} – LED.11IGN.A60",
+          "desc": "EC type-examination certificate for the single-leaf A-60 sliding fire door.",
+          "extra": "valid until 12 Apr 2031"
+        },
+        {
+          "pattern": "M26017-B-{v}-LED.STS.A60.pdf",
+          "name": "M26017-B-{v} – LED.STS.A60",
+          "desc": "EC type-examination certificate for the door’s control system.",
+          "extra": "valid until 12 Apr 2031"
+        }
+      ]
+    },
+    {
+      "title": "Technical documents",
+      "note": "Drawings, configuration matrix and wiring plan.",
+      "items": [
+        {
+          "pattern": "LED.11IGN.A60.CuDrwg.{v}.pdf",
+          "group": "Zeichnung CuDrwg",
+          "desc": "Fire test drawing of the A-60 internal sliding door."
+        },
+        {
+          "pattern": "LED.11IGN.A60.CuDrwg.{v}.dwg",
+          "group": "Zeichnung CuDrwg",
+          "desc": "The same drawing as a CAD file for further processing."
+        },
+        {
+          "pattern": "LED.11IGN.A60.MTX.{v}.xlsm",
+          "desc": "Configuration matrix V{v}. Excel file with macros – enable content when opening."
+        },
+        {
+          "pattern": "LED.STS.A60.ConPlan.{v}.pdf",
+          "desc": "Connection and wiring plan for control unit, drive and sensors."
+        }
+      ]
+    },
+    {
+      "title": "Operation",
+      "note": "Manual for the Heise Slide Track System.",
+      "items": [
+        {
+          "pattern": "LED.STS.A60.UseMan.{v}.pdf",
+          "desc": "User Manual V{n} (2023). Heise Slide Track System type LED.STS.A60."
+        }
+      ]
+    }
+  ],
+
+  "further": {
+    "title": "Further documents",
+    "note": ""
+  },
+
+  "media": {
+    "photo_alt": "LED.11IGN.A60 test assembly, view {n}"
+  }
+}
