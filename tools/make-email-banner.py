@@ -14,8 +14,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 # ---------------------------------------------------------------- Konfiguration
 
-URL = "https://aegk71.github.io/LED.11IGN.A60/"
-URL_TEXT = "aegk71.github.io/LED.11IGN.A60"
+URL = "https://lethe-bremen.github.io/LED.11IGN.A60/"
+URL_TEXT = "lethe-bremen.github.io/LED.11IGN.A60"
 
 W, H = 1200, 560
 BAR_H = 120          # weisse Logoleiste

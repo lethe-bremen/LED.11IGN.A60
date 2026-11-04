@@ -3,7 +3,7 @@
 Temporäre Download-Seite für die Messe. Eine einzelne `index.html` ohne Build-Schritt,
 ohne Framework, ohne externe Abhängigkeiten und ohne Tracking. Seitensprache: Englisch.
 
-**Live-URL:** https://aegk71.github.io/LED.11IGN.A60/
+**Live-URL:** https://lethe-bremen.github.io/LED.11IGN.A60/
 
 ## Aufbau
 
@@ -50,7 +50,7 @@ neue Bild heller, den Verlauf in `.hero::before` kräftiger stellen — die drei
 
 ### Variante A — direkt auf github.com (ohne Git)
 
-1. Repository öffnen: https://github.com/aegk71/LED.11IGN.A60
+1. Repository öffnen: https://github.com/lethe-bremen/LED.11IGN.A60
 2. In den Ordner `files` wechseln
 3. **Add file → Upload files**, Datei per Drag & Drop ablegen, **Commit changes**
 4. Zurück im Repo-Root auf `index.html` klicken, Stift-Symbol (**Edit**)
@@ -124,13 +124,13 @@ Grenzen von GitHub Pages: max. 100 MB pro Datei, ca. 1 GB pro Repository,
 
 ### Nur Pages abschalten, Repo behalten
 
-1. https://github.com/aegk71/LED.11IGN.A60/settings/pages
+1. https://github.com/lethe-bremen/LED.11IGN.A60/settings/pages
 2. Unter **Build and deployment → Source** auf **None** stellen
 
 Oder per CLI:
 
 ```bash
-gh api -X DELETE repos/aegk71/LED.11IGN.A60/pages
+gh api -X DELETE repos/lethe-bremen/LED.11IGN.A60/pages
 ```
 
 Die URL liefert danach 404, die Dateien bleiben im Repo erhalten.
@@ -138,13 +138,13 @@ Die URL liefert danach 404, die Dateien bleiben im Repo erhalten.
 ### Repo auf privat stellen (Pages wird dadurch inaktiv)
 
 ```bash
-gh repo edit aegk71/LED.11IGN.A60 --visibility private --accept-visibility-change-consequences
+gh repo edit lethe-bremen/LED.11IGN.A60 --visibility private --accept-visibility-change-consequences
 ```
 
 ### Alles löschen
 
 ```bash
-gh repo delete aegk71/LED.11IGN.A60 --yes
+gh repo delete lethe-bremen/LED.11IGN.A60 --yes
 ```
 
 Das ist endgültig. Vorher sicherstellen, dass die Originaldateien noch lokal liegen
@@ -155,9 +155,11 @@ Das ist endgültig. Vorher sicherstellen, dass die Originaldateien noch lokal li
 Fertiges Bild im Handy-Hochformat: **`assets/qr-poster.png`** (1080 × 1920).
 Erzeugt von `tools/make-qr-poster.py`.
 
-Der QR-Code zeigt auf https://aegk71.github.io/LED.11IGN.A60/ — die URL ändert sich nicht,
-solange Repo-Name und Konto gleich bleiben. Inhalte lassen sich also beliebig nachpflegen,
-ohne einen gedruckten QR-Code zu entwerten.
+Der QR-Code zeigt auf https://lethe-bremen.github.io/LED.11IGN.A60/ — die URL ändert sich nicht,
+solange Organisation und Repo-Name gleich bleiben. Inhalte lassen sich also beliebig nachpflegen,
+ohne einen gedruckten QR-Code zu entwerten. **Wird das Repo umbenannt oder verschoben, ist die
+alte Adresse sofort tot** (GitHub leitet bei Pages nicht weiter) und alle gedruckten Codes
+müssen ersetzt werden. Dagegen hilft nur eine eigene Subdomain, siehe [EMAIL.md](EMAIL.md).
 
 Neu erzeugen (z. B. nach Textänderung oder für eine andere Messe):
 

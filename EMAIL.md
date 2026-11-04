@@ -38,8 +38,8 @@ Dafür der HTML-Baustein unten.
        style="width:600px;max-width:100%;border-collapse:collapse;">
   <tr>
     <td style="padding:0 0 18px 0;">
-      <a href="https://aegk71.github.io/LED.11IGN.A60/" style="display:block;text-decoration:none;">
-        <img src="https://aegk71.github.io/LED.11IGN.A60/assets/email-banner.png"
+      <a href="https://lethe-bremen.github.io/LED.11IGN.A60/" style="display:block;text-decoration:none;">
+        <img src="https://lethe-bremen.github.io/LED.11IGN.A60/assets/email-banner.png"
              width="600"
              alt="LED.11IGN.A60 – A-60 Sliding Door System: Zulassungen, Zeichnungen und Handbuch zum Download"
              style="display:block;width:100%;max-width:600px;height:auto;border:0;outline:none;text-decoration:none;">
@@ -49,8 +49,8 @@ Dafür der HTML-Baustein unten.
   <tr>
     <td style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1a1d21;">
       Direktlink:
-      <a href="https://aegk71.github.io/LED.11IGN.A60/"
-         style="color:#143868;font-weight:bold;">aegk71.github.io/LED.11IGN.A60</a>
+      <a href="https://lethe-bremen.github.io/LED.11IGN.A60/"
+         style="color:#143868;font-weight:bold;">lethe-bremen.github.io/LED.11IGN.A60</a>
     </td>
   </tr>
 </table>
@@ -69,7 +69,7 @@ Sehr geehrte Damen und Herren,
 wie besprochen finden Sie unter folgendem Link alle Unterlagen zu unserem
 einflügeligen A-60 Brandschutz-Schiebetürsystem LED.11IGN.A60:
 
-https://aegk71.github.io/LED.11IGN.A60/
+https://lethe-bremen.github.io/LED.11IGN.A60/
 
 Enthalten sind die EG-Baumusterprüfbescheinigungen nach MED 2014/90/EU,
 die Brandtestzeichnung als PDF und DWG, die Auslegungsmatrix, der
@@ -89,7 +89,7 @@ Dear Sir or Madam,
 as discussed, please find all documents for our single-leaf A-60 sliding
 fire door system LED.11IGN.A60 at the following link:
 
-https://aegk71.github.io/LED.11IGN.A60/
+https://lethe-bremen.github.io/LED.11IGN.A60/
 
 It contains the EC type-examination certificates under MED 2014/90/EU, the
 fire test drawing as PDF and DWG, the configuration matrix, the wiring plan
@@ -109,20 +109,26 @@ der Link tot — auch der bereits gedruckte QR-Code.
 **Keinen Massenversand über den normalen Mailclient.** Bei mehr als einer Handvoll
 Empfänger gehört jede Adresse ins BCC, sonst gibt man Kundenadressen quer preis.
 
-## Empfehlung: eigene Subdomain
+## Optional: eigene Subdomain
 
-Die Adresse `aegk71.github.io/LED.11IGN.A60` ist technisch einwandfrei, sieht in
-einer Geschäftsmail aber nach Privatperson aus — der Empfänger sieht einen fremden
-GitHub-Benutzernamen, nicht Lethe. Manche Spam-Filter bewerten das mit ab.
+Die Adresse `lethe-bremen.github.io/LED.11IGN.A60` ist so, wie sie ist, in Ordnung —
+der Firmenname steht drin, und sie wirkt in einer Geschäftsmail nicht mehr nach
+Privatperson.
 
-Sauberer wäre `downloads.lethe-bremen.de`. Dafür sind drei Schritte nötig:
+Ein Argument für `downloads.lethe-bremen.de` bleibt trotzdem: **Die Adresse hängt dann
+nicht mehr am GitHub-Konto und am Repo-Namen.** Beim Umzug vom privaten auf den
+Firmen-Account ist die alte Adresse ungültig geworden, und jeder bis dahin gedruckte
+oder verschickte QR-Code lief ins Leere. Mit eigener Subdomain hätte sich nur der
+DNS-Eintrag geändert, alle Codes wären weiter gegangen.
+
+Das lohnt sich vor allem, wenn die Seite länger als eine Messe leben soll. Drei Schritte:
 
 1. Beim DNS-Verwalter von lethe-bremen.de (laut Impressum Gemini ArtWork Media)
-   einen CNAME-Eintrag anlegen: `downloads` → `aegk71.github.io`
+   einen CNAME-Eintrag anlegen: `downloads` → `lethe-bremen.github.io`
 2. Im Repo unter *Settings → Pages → Custom domain* `downloads.lethe-bremen.de`
    eintragen und *Enforce HTTPS* aktivieren
 3. `URL` in beiden Skripten unter `tools/` anpassen und Poster und Banner neu
    erzeugen — der QR-Code zeigt sonst weiter auf die alte Adresse
 
-Solange das nicht eingerichtet ist, funktioniert die GitHub-Adresse aber
-uneingeschränkt.
+Wichtig dabei: Danach **nichts mehr drucken, bevor der DNS-Eintrag steht und HTTPS
+aktiv ist.** Und: Sobald die Subdomain läuft, die Adresse auch nicht mehr ändern.

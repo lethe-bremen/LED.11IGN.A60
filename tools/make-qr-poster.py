@@ -13,7 +13,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # ---------------------------------------------------------------- Konfiguration
 
-URL = "https://aegk71.github.io/LED.11IGN.A60/"
+URL = "https://lethe-bremen.github.io/LED.11IGN.A60/"
 
 W, H = 1080, 1920
 
@@ -162,7 +162,7 @@ print(f"QR: {modules} Module x {box} px = {qr_img.width} px, Version {qr.version
 
 # ---------------------------------------------------------------- Fusszeile
 
-center(draw, cy + CARD + 42, "aegk71.github.io/LED.11IGN.A60", SEMI(32), WHITE)
+center(draw, cy + CARD + 42, "lethe-bremen.github.io/LED.11IGN.A60", SEMI(32), WHITE)
 center(draw, H - 74, "Lethe Exterior Doors GmbH  ·  Bremen, Germany  ·  lethe-bremen.de",
        REG(25), MUTED)
 
