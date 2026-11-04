@@ -124,8 +124,8 @@ Reihenfolge Nummern im Namen verwenden (`…-Foto-07.jpg`).
 
 Im Repo auf den Reiter **Actions**: Ein grüner Haken heißt, die Seite ist veröffentlicht
 und die Live-Seite wurde geprüft. Bei einem roten Kreuz ist **nichts verändert worden**,
-die bisherige Seite bleibt online, und das Log nennt den Grund. GitHub schickt dazu auch
-eine E-Mail.
+die bisherige Seite bleibt online, und das Log nennt den Grund. Je nach Benachrichtigungs-
+einstellungen des Kontos schickt GitHub dazu auch eine E-Mail.
 
 Startet nach einem Upload nichts (kein neuer Eintrag unter Actions), lässt sich der Bau von
 Hand anstoßen: **Actions → Seite bauen und veroeffentlichen → Run workflow**.
